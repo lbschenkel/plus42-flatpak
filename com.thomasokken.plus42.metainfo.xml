@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.thomasokken.plus42</id>
+
+  <name>Plus42</name>
+  <summary>An enhanced HP-42S calculator simulator</summary>
+  <content_rating type="oars-1.1" />
+
+  <developer id="com.thomasokken">
+    <name>Thomas Okken</name>
+  </developer>
+
+  <url type="homepage">https://thomasokken.com/plus42/</url>
+  <url type="faq">https://thomasokken.com/plus42/#faq</url>
+  <url type="help">https://thomasokken.com/plus42/#doc</url>
+  <url type="donation">https://thomasokken.com/plus42/#donations</url>
+  <url type="vcs-browser">https://codeberg.org/thomasokken/plus42desktop</url>
+  <url type="bugtracker">https://codeberg.org/thomasokken/plus42desktop/issues</url>
+
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0-only</project_license>
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
+
+  <description>
+    <p>
+      Plus42 is an advanced scientific programmable calculator, based on Free42. Free42, in turn, is a complete re-implementation of the HP-42S scientific programmable RPN calculator, which was made from 1988 until 1995 by Hewlett-Packard. Free42 is a complete rewrite and contains no HP code whatsoever.
+    </p>
+    <p>
+      Plus42 builds on Free42 and adds: <em>A Larger Display</em>, with 8 rows and 22 columns (131x64 pixels) by default, which the user may resize at will; <em>Algebraic Expressions</em> modeled after those used on the HP-27S and HP-17B/19B; attached <em>Units</em> and unit conversions modeled after those used on the HP-48/49/50 series; <em>Directories</em> for more organized storage of programs and variables; <em>TVM</em> and amortization tables; and two-dimensional <em>Plotting</em> of functions, with ability to zoom and pan, and find integrals and roots from points in the plot.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">com.thomasokken.plus42.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://thomasokken.com/plus42/images/plus42-linux.png</image>
+      <caption>Calculator</caption>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="1.3.15" date="2026-05-04">
+      <description>
+        <ul>
+          <li>Fixed RLN and RRN for negative numbers in BSIGNED mode.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.14" date="2026-04-21">
+      <description>
+        <ul>
+          <li>Fixed crash in REFMOVE.</li>
+          <li>Decimal version: More accurate GAMMA for integer arguments.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.13" date="2026-01-13">
+      <description>
+        <ul>
+          <li>Fixed potential crash in VARMENU.</li>
+          <li>Android version: Fixed initial keyboard focus.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.12" date="2025-10-28">
+      <description>
+        <ul>
+          <li>Fixed crash in menu logic.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.11a" date="2025-10-21">
+      <description>
+        <ul>
+          <li>Another workaround for the buggy vibrator in Android 16. This one is a new option, "use older haptic feedback logic," for phones like the Pixel 10 Pro, where the pre-1.3.10f haptic feedback logic worked, but the new logic introduced in 1.3.10f does not.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.11" date="2025-10-15">
+      <description>
+        <ul>
+          <li>Fixed crash in EQN-&gt;R/S when EQNS does not yet exist.</li>
+          <li>When a new program was created by inserting END, the new program could end up being locked initially. Fixed.</li>
+          <li>Linux version: Fixed beeper when running under Wayland.</li>
+          <li>Linux version: Replaced built-in XPM icons with PNG ones, for compatibility with certain recent Linux distros.</li>
+          <li>Windows and MacOS versions: Made the links in the About box more obviously clickable.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.10f" date="2025-10-10">
+      <description>
+        <ul>
+          <li>Workaround for buggy vibrator in Android 16.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.10e" date="2025-09-28">
+      <description>
+        <ul>
+          <li>Another Android 16 kB build tweak, to maintain compatibility with Android 4.4.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.10d" date="2025-09-28">
+      <description>
+        <ul>
+          <li>Updated build configuration to support 16 kB page size.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.10c" date="2025-07-19">
+      <description>
+        <ul>
+          <li>Fixed "No Status" and "Full Screen" modes. These got broken in 1.3.10.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.10b" date="2025-07-05">
+      <description>
+        <ul>
+          <li>The size of the main window would not be saved if the app was exited while minimized. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.10a" date="2025-07-04">
+      <description>
+        <ul>
+          <li>Fixed layout for Android 15 and later.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.10" date="2025-07-03">
+      <description>
+        <ul>
+          <li>Fixed a couple of rare crashes.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.9" date="2025-06-29">
+      <description>
+        <ul>
+          <li>Applying units in PRGM mode didn't work when the RPN stack was empty. Fixed.</li>
+          <li>Android version: Fixed crash with skins with missing annunciators.</li>
+          <li>Linux version: Fixed state saving when the app is exited because of a logout, reboot, or shutdown.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.8a" date="2025-06-10">
+      <description>
+        <ul>
+          <li>Fix for hang during audio playback.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.8" date="2025-06-05">
+      <description>
+        <ul>
+          <li>Fixed potential crash on app restart.</li>
+          <li>Android version: fixed memory leak on app restart.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.7e" date="2025-06-04">
+      <description>
+        <ul>
+          <li>Fixed potential crash on app restart.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.7d" date="2025-06-04">
+      <description>
+        <ul>
+          <li>When the main window was un-minimized, its width could be restored incorrectly. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.7c" date="2025-06-03">
+      <description>
+        <ul>
+          <li>Fix for unreliable state file saving.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.7b" date="2025-06-01">
+      <description>
+        <ul>
+          <li>Fixed hang on Shift EXIT.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.7a" date="2025-05-30">
+      <description>
+        <ul>
+          <li>Fix for certain rare crashes.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.7" date="2025-05-29">
+      <description>
+        <ul>
+          <li>Now hiding shadowed labels from MVAR catalogs.</li>
+          <li>Android version: Fixed a couple of crashes.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.6" date="2025-05-21">
+      <description>
+        <ul>
+          <li>Better handling of ACC=0 in INTEG.</li>
+          <li>More accurate C.E^X-1.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.5" date="2025-05-12">
+      <description>
+        <ul>
+          <li>Fixed a couple of equation editor bugs.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.4" date="2025-05-06">
+      <description>
+        <ul>
+          <li>Fixed handling of shared matrices in PUTMI.</li>
+          <li>Fixed handling of subnormal complex numbers in 1/X.</li>
+          <li>Added SLN, SRN, and ASRN to CATALOG-&gt;BASE.</li>
+          <li>Added current base to the BASE mode status indicators, and made the indicators more compact.</li>
+          <li>Fixed skin key highlighting for hardware keyboard keystrokes, when using certain skins with complicated key mappings.</li>
+          <li>Fixed potential crash when loading state.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.3" date="2025-04-29">
+      <description>
+        <ul>
+          <li>BASE menu: Implemented SLN, SRN, and ASRN. These functions are can be typed as Shift-SL, Shift-SR, and Shift-ASR, respectively, and RJ can now be typed as Shift-LJ.</li>
+          <li>More accurate DET, INVRT, and matrix division for 2x2 matrices.</li>
+          <li>When spelling out built-in function names, '-' is now accepted as an alternative for '→', to make conversion functions easier to type.</li>
+          <li>Menu keys that execute different functions when pressed with Shift now show their alternate function while Shift is active. (This behavior can be disabled and enabled using the new STATIC and DYNAMIC settings in the new MENUS submenu of the MODES menu.)</li>
+          <li>Decimal version: BS→N and BD→N were rounding their results to 16 digits. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.2" date="2025-04-25">
+      <description>
+        <ul>
+          <li>RLN, RRN, RLCN, and RRCN did not drop the stack. Fixed.</li>
+          <li>Fixed a couple of bugs in the equation editor.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3.1" date="2025-04-24">
+      <description>
+        <ul>
+          <li>BASE: Fixed DECINT behavior for -2^(WSIZE-1).</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.3" date="2025-04-23">
+      <description>
+        <ul>
+          <li>BASE enhancements: shift and rotate functions, bit manipulation functions, floating-point conversions, and optional digit grouping. See the Free42 web site for all the details.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2.8a" date="2025-04-19">
+      <description>
+        <ul>
+          <li>Fixed pop-up keyboard behavior with dialogs in the equation editor.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2.8" date="2025-04-18">
+      <description>
+        <ul>
+          <li>NEWEQN and EDITEQN functions (EQN.FCN menu). These create or edit equations and strings in place, in the stack and in programs, without needing to go through EQN mode.</li>
+          <li>Moved equation settings from MODES to EQN.FCN, and moved BASE settings from MODES to BASE, to make them easier to find and to declutter the MODES menu.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2.7" date="2025-04-10">
+      <description>
+        <ul>
+          <li>Fixed crash in RCOMPLX/PCOMPLX when the stack is empty (NSTK mode).</li>
+          <li>More accurate integer powers of complex numbers. Specifically: special cases for pure real, pure imaginary, and numbers of the form a+ai and a-ai.</li>
+          <li>Fixed VIEW for long values.</li>
+          <li>Added XSTR option for EQN-&gt;STO-&gt;X and EQN-&gt;STO-&gt;PRGM.</li>
+          <li>Windows, MacOS, and Linux versions: Added "Edit Keyboard Map" option to the Help menu. Also, added a section about keyboard map customization in the README.txt file.</li>
+          <li>Windows and Linux versions: Fixed handling of skins with non-zero offsets of the main image (the top left corner of the Skin: line).</li>
+          <li>iOS version: The file selector wasn't sorting the directory listing. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2.6" date="2025-02-19">
+      <description>
+        <ul>
+          <li>Fixed crash when saving an equation without having modified it. This bug was introduced in the previous release.</li>
+          <li>Improvements in error handling when evaluating equations.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2.5" date="2025-02-16">
+      <description>
+        <ul>
+          <li>SOLVER and ∫f(x) now allow selecting programs outside the current directory.</li>
+          <li>Equation lines were being truncated to a maximum of 100 characters when they were displayed or printed. Fixed.</li>
+          <li>iOS version: Implemented Swipe to Delete in the file selector dialog.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2.4" date="2025-02-14">
+      <description>
+        <ul>
+          <li>Equations can now be embedded in programs, using X2LINE or EQN-&gt;STO-&gt;PRGM. Equation lines can be plain, which means they push the equation object onto the stack, or they can be EVAL lines, which evaluate the equation in place. Equation lines can be toggled between plain and EVAL lines using the EVAL function in PRGM mode.</li>
+          <li>The CUSTOM menu didn't stick reliably, due to a bug introduced in 1.2. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2.3" date="2025-02-07">
+      <description>
+        <ul>
+          <li>Fixed crash when trying to load invalid skins.</li>
+          <li>Added IDENT function. This returns the app's version number as a negative integer, in -aabbccdd format, with 1.2.3f formatted as -1020306, for example. The number is negative in order to distinguish Plus42 from Free42, which returns positive numbers from IDENT.</li>
+          <li>XROMs are now decoded immediately when pasting.</li>
+          <li>Switched ^ and ↑ in the character set. The change is transparent to the user, but it restores code compatibility with the encoding of ↑ in Free42.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2.2" date="2025-01-26">
+      <description>
+        <ul>
+          <li>User-defined units with SI prefixes didn't work in the CUSTOM menu. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2.1" date="2025-01-26">
+      <description>
+        <ul>
+          <li>Units with SI prefixes didn't work in the CUSTOM menu. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2b" date="2025-01-25">
+      <description>
+        <ul>
+          <li>More keyboard fixes.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2a" date="2025-01-24">
+      <description>
+        <ul>
+          <li>Pop-up keyboard typing fixes.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.2" date="2025-01-23">
+      <description>
+        <ul>
+          <li>Program locking, to prevent accidental editing of programs. This is done using the LOCK and UNLOCK functions. See the Free42 web site for details.</li>
+          <li>Improved display contrast in the built-in skins.</li>
+          <li>Android and iOS versions: Pop-up ALPHA keyboard, for easier text entry.</li>
+          <li>Linux version: Dark Mode support.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.17b" date="2025-01-01">
+      <description>
+        <ul>
+          <li>Rolling back the beeper fix from the previous release. It was not performing as intended. Back to the drawing board.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.17a" date="2024-12-28">
+      <description>
+        <ul>
+          <li>Made TONE and BEEP play audio asynchronously. This should fix the occasional crashes caused by those functions hogging the UI too long.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.17" date="2024-12-22">
+      <description>
+        <ul>
+          <li>Fixed pasting of GETMI, PUTMI, GETLI, and PUTLI.</li>
+          <li>Added ALPHA mapping from Y^X to '↑'.</li>
+          <li>Fixed crash with circular unit definitions.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.16" date="2024-12-18">
+      <description>
+        <ul>
+          <li>The CUSTOM menu now supports unit assignments.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.15" date="2024-12-13">
+      <description>
+        <ul>
+          <li>Added option to show the active keyboard map superimposed on the skin. The desktop versions have this in the Help menu, and the mobile versions have it in the About dialog.</li>
+          <li>Added functions for direct access to matrix and list elements: GETMI, PUTMI, GETLI, and PUTLI. See the Free42 web site for details.</li>
+          <li>iOS and MacOS versions: Improved Dark Mode support.</li>
+          <li>In compatibility mode, VIEW(G(A)) would recall the global A to the stack, but view the local A. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.14" date="2024-11-14">
+      <description>
+        <ul>
+          <li>I%YR fixes for values close to zero.</li>
+          <li>Now pre-populating state name for States -&gt; More -&gt; Rename.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.13" date="2024-10-27">
+      <description>
+        <ul>
+          <li>Implemented GETKEYA. This works like GETKEY, except that it will not wait for a keystroke if no keystrokes are in the keyboard queue, returning 0 instead in that case.</li>
+          <li>Android version: Fixed crash with relative file imports.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.12" date="2024-05-28">
+      <description>
+        <ul>
+          <li>Fixed handling of °C and °F return values in numeric solver.</li>
+          <li>Android version: Fixed crash for certain unrecognized key codes from Bluetooth keyboards.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.11" date="2024-05-21">
+      <description>
+        <ul>
+          <li>Implemented LL(NAME:VALUE:EXPR). This creates a local variable and executes one or more expressions while the local variable is in scope.</li>
+          <li>Fixed parameter visibility issues in Σ() and ∫().</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.10a" date="2024-05-15">
+      <description>
+        <ul>
+          <li>PSE could halt program execution if it was used right after TONE or BEEP. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.10" date="2024-04-24">
+      <description>
+        <ul>
+          <li>Fixed ALPHA pasting during command entry.</li>
+          <li>Fixed MODES and DISP menus in EQN list view.</li>
+          <li>Equation editor: fixed handling of direct-mapped "%" and "PI".</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.9" date="2024-03-30">
+      <description>
+        <ul>
+          <li>Now recognizing comment delimiters '@' and ';' for program pasting.</li>
+          <li>More accurate complex ASIN/ASINH.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.8" date="2024-03-26">
+      <description>
+        <ul>
+          <li>Accuracy improvements for C.LN1+X, and complex LN, ATAN, and ATANH.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.7" date="2024-03-25">
+      <description>
+        <ul>
+          <li>EDIT and EDITN, when editing lists, would not display the current element index correctly in 1LINE mode. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.6b" date="2024-03-22">
+      <description>
+        <ul>
+          <li>Windows version: Fixed display flicker using buffered painting.</li>
+          <li>iOS and MacOS versions: Changed skin loader to use WKWebView.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.6a" date="2024-03-21">
+      <description>
+        <ul>
+          <li>Reduced display blurriness when the main window is resized.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.6" date="2024-03-18">
+      <description>
+        <ul>
+          <li>Fixed keyboard mapping bug in the equation editor. This bug was caused by the alternate direct command mapping changes in 1.1.5.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.5" date="2024-03-07">
+      <description>
+        <ul>
+          <li>Direct command mapping now supports alternate mappings for ALPHA mode.</li>
+          <li>Fixed source highlighting glitch when tracing N+U in equations.</li>
+          <li>Windows version: Fixed a couple of display glitches.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.4e" date="2024-03-04">
+      <description>
+        <ul>
+          <li>Windows, MacOS, and Linux versions: Constraining print-out window height to multiples of 18 pixels, that is, to a whole number of lines.</li>
+          <li>Windows version: Fixed skin rendering problem in Windows Vista.</li>
+          <li>Linux version: Resizable main window.</li>
+          <li>Linux version: Ctrl-D shortcut for Clear Print-Out.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.4d" date="2024-02-28">
+      <description>
+        <ul>
+          <li>iOS version: Fixed crash when sharing on iPad.</li>
+          <li>MacOS version: Fixed crash when making the main window too small.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.4c" date="2024-02-27">
+      <description>
+        <ul>
+          <li>Resizable main window.</li>
+          <li>Ctrl-D shortcut for Clear Print-Out.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.4b" date="2024-02-21">
+      <description>
+        <ul>
+          <li>Resizable main window.</li>
+          <li>Command-D shortcut for Clear Print-Out.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.4a" date="2024-02-14">
+      <description>
+        <ul>
+          <li>iPad support.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.4" date="2024-02-09">
+      <description>
+        <ul>
+          <li>Keyboard mapping fixes.</li>
+          <li>Android version: Support for external keyboards.</li>
+          <li>Linux version: Changed ALSA device from "plughw:0,0" to "default".</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.3a" date="2024-01-24">
+      <description>
+        <ul>
+          <li>Fixed crash in File Management Menu.</li>
+          <li>Fixed crash when importing or exporting to cloud storage.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.3" date="2024-01-17">
+      <description>
+        <ul>
+          <li>Added C.LN1+X and C.E^X-1 functions. These are complex-capable versions of LN1+X and E^X-1.</li>
+          <li>Binary version: When converting binary to decimal, only use 17 digits when actually needed. This prevents 0.1 from turning into 1.0000000000000001e-1, for example.</li>
+          <li>iOS version: Support for external keyboards.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.2c" date="2023-12-21">
+      <description>
+        <ul>
+          <li>Export State used f42 file extension instead of p42. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.2b" date="2023-12-18">
+      <description>
+        <ul>
+          <li>Fixed file access for Android &gt;= 11.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.2a" date="2023-12-12">
+      <description>
+        <ul>
+          <li>Fixed startup crash, caused by a bug in Apple's latest compiler.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.2" date="2023-12-06">
+      <description>
+        <ul>
+          <li>Fixed a bug that could cause a crash on startup.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1.1" date="2023-12-01">
+      <description>
+        <ul>
+          <li>CSLD? did not handle intervening XEQ/RTN. Fixed.</li>
+          <li>FUNC did not detect previous FUNC/LNSTK/L4STK. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.1" date="2023-11-29">
+      <description>
+        <ul>
+          <li>Full-screen matrix and list editing (EDIT &amp; EDITN)</li>
+          <li>Added option to show LASTX at the top of the stack display area: DISP-&gt;LTOP</li>
+          <li>Added option to show ALPHA at the top of the stack display area: DISP-&gt;ATOP</li>
+          <li>Added option to show the state of flags 0-10 in the header: DISP-&gt;HFLAGS</li>
+          <li>Added option to show an indicator for POLAR mode in the header: DISP-&gt;HPOLAR</li>
+          <li>EDIT, EDITN, and INDEX now support editing lists, nested lists, empty lists, and matrices within lists. See the Free42 web site for details.</li>
+          <li>FUNC now hides the caller's RPN stack, so user-defined functions can use functions like CLST and R↓ without causing side effects.</li>
+          <li>User-defined functions can now be made to support 'stack lift disable' properly. For functions using FUNC, this happens automatically, and other functions can use the new CSLD? function (Caller's Stack Lift Disabled?).</li>
+          <li>FNRM and UVEC, when called with very large parameters, could get incorrect results due to overflows in intermediaries. Fixed.</li>
+          <li>Fixed parameter bounds check in PIXEL.</li>
+          <li>Windows, MacOS, and Linux versions: Keyboard maps now support separate mappings for unshifted and shifted numeric keypad keys, and unshifted and shifted Space.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.21" date="2023-08-17">
+      <description>
+        <ul>
+          <li>Added string and list functions to the equation language. The new functions have been added to the FLAGS menu and CATALOG-&gt;FCN in the equation editor. List literals have the format {A:B:C}. List elements may be any type, including lists or matrices.</li>
+          <li>Equations: Fixed stack access within matrix literals.</li>
+          <li>Fixed LASTX option in the equation editor's stack menu (R↓ key).</li>
+          <li>Fixed Y^X with units where X is a negative reciprocal.</li>
+          <li>→LIST and LIST→ didn't print in TRACE mode. Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.20" date="2023-08-11">
+      <description>
+        <ul>
+          <li>Added 1LINE and NLINE functions, to select 1-line or n-line mode. 1-line mode forces matrices and lists to be displayed in compact format, even if the display has more than 2 lines; n-line mode is the multi-line matrix and list display that was introduced in 1.0.17. The latter remains the default.</li>
+          <li>INPUT would crash if R/S was pressed while the stack was empty, in NSTK mode. Fixed.</li>
+          <li>ANUM would consider a decimal point or comma by itself as zero, instead of ignoring it. Fixed.</li>
+          <li>Added UNIT? to the UNIT.FCN menu.</li>
+          <li>If an error occurs while evaluating an equation, which does not exist in the EQN list, going to EQN mode and pressing R/S will now add the equation to the EQN list, and then start editing with the cursor on the site of the error. This used to work only for equations that were in the EQN list beforehand.</li>
+          <li>Added LASTX for equations, to work alongside REGX/REGY/REGZ/REGT, for read-only access to the RPN stack.</li>
+          <li>EDIT, EDITN, and INDEX didn't clear flags 76 and 77 (matrix edge wrap and end wrap), while they should. Fixed.</li>
+          <li>Decimal version: In HMS+ and HMS-, fixed handling of cases where either or both of the arguments has a number of minutes or seconds &gt;= 60. (The binary version did not have this bug.)</li>
+          <li>Binary version: max digits for SHOW increased to 17. This was necessary because 16 digits was actually never enough to begin with. For example, 5 1/X and 5 SQRT X^2 1/X both returned a result that looked like 0.2 in SHOW, even though they are different, as can be easily verified with X=Y? or by subtracting them. It takes 17 decimal digits to ensure that different binary numbers will always be rendered as different decimal numbers.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.19" date="2023-05-05">
+      <description>
+        <ul>
+          <li>Fixed the definition of the 'ton' unit (U.S. short ton). It was 10^10 times too large, due to a missing sign in the units definition table.</li>
+          <li>Equations like [1:2:3]=A, when entered without a name, weren't parsed correctly, because the part before the first colon would be incorrectly interpreted as a name. Fixed.</li>
+          <li>When an error occurs while evaluating an equation, and that equation exists in the EQN list, pressing R/S in the EQN list view will now start editing that equation, with the cursor on the part of the equation where the error occurred.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.18" date="2023-04-17">
+      <description>
+        <ul>
+          <li>Fixed crash when loading state, when the current program is an equation that is only referenced by SOLVE/INTEG internal variables.</li>
+          <li>Changed Σ+/Σ- so that, in NSTK mode, they will accept a single real argument, assuming Y=0 in that case.</li>
+          <li>Added STOP() function for equation debugging.</li>
+          <li>In the equation editor, the named-equation catalog could select items from the wrong row.</li>
+          <li>Fixed handling of LCLV of indexed matrix. It used to leave any pushed indexed matrix in limbo until RTN. With this change, the pushed indexed matrix is popped immediately.</li>
+          <li>Tuned TONE frequencies to A440 scale.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.17a" date="2023-04-10">
+      <description>
+        <ul>
+          <li>Copy in PRGM mode was dropping line 01, because of an optimizer bug in the latest compiler. Reduced optimization level from -Os to -O1 to work around this problem.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.17" date="2023-04-05">
+      <description>
+        <ul>
+          <li>Matrices and lists in the X register are now shown in full, or as much of them as will fit anyway, when the display size is set to more than 2 rows.</li>
+          <li>SOLVE in PLOT now provides more informative feedback for Extremum, Sign Reversal, and results from the direct solver.</li>
+          <li>Fixed crash in RTNERR when switching back to NSTK mode after FUNC/L4STK.</li>
+          <li>Fixed ASSIGN "" in programs.</li>
+          <li>Added PRREG to the PRINT menu.</li>
+          <li>NN→S now ignores the display mode and always acts like ALL mode is active. The idea being that if you care about the display mode, you'll probably be using N→S, and you only need NN→S if you specifically want to see full internal precision.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.16" date="2023-03-17">
+      <description>
+        <ul>
+          <li>EDIT, EDITN, and INDEX now support lists, acting like they are 1-column matrices. (Empty lists are not supported, they must have at least one element. This limitation will be removed in a future release. Note that you can create a new 1-element list by simply doing NEWLIST 0 +.) This includes STOIJ, RCLIJ, STOEL, RCLEL, I+, I-, J+, J-, ←, ↑, ↓, →, INSR, DELR, and DIM.</li>
+          <li>Equation editor: now inserts spaces around logical AND, OR, XOR, and NOT.</li>
+          <li>Added PRREG. Because PRV "REGS" is not a good substitute.</li>
+          <li>Added NN→S. This works like N→S (convert number to string on the stack), but without the 12-digit mantissa length limit, so you get full precision in ALL mode.</li>
+          <li>Fixed stack lift handling in DELR and STOFLAG.</li>
+          <li>Fixed pasting 1/X, 10^X, and 4STK, when pasted without line number and with trailing space.</li>
+          <li>PRP and LIST in TRACE mode now print line numbers for all lines that are targets of GTOL or XEQL, like it already did for LBL lines.</li>
+          <li>Fixed pasting of GTOL and XEQL.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.15" date="2022-12-14">
+      <description>
+        <ul>
+          <li>Fixed a couple of bugs in Paste of scalars in BINM, OCTM, and HEXM modes.</li>
+          <li>Fixed pasting of U+22A2 and U+22A6 ('append' characters used by i41CX and Emu42) and U+00B7 ('bullet' character used by Emu42).</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.14" date="2022-11-19">
+      <description>
+        <ul>
+          <li>Added support for new SI prefixes: R (ronna, 10^27), Q (quetta, 10^30), r (ronto, 10^-27), and q (quecto, 10^-30).</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.13" date="2022-11-12">
+      <description>
+        <ul>
+          <li>Fixed crash with one-arg RADIUS, ANGLE, XCOORD, and YCOORD.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.12" date="2022-10-27">
+      <description>
+        <ul>
+          <li>SOLVE does a better job of reporting Sign Reversal when a function changes sign around a vertical asymptote, instead of reporting it as a root.</li>
+          <li>When returning to the equation editor after a parse error, the text could be positioned incorrectly on the screen, and the editor could even crash, in some cases. Fixed.</li>
+          <li>Added Boolean operators to the equation editor's PGM.FCN menu.</li>
+          <li>Made I%YR solver a bit more robust.</li>
+          <li>BASE: complex numbers and numbers with units were being copied or shown in non-decimal bases in some cases.</li>
+          <li>Better HEXM and OCTM handling in SHOW.</li>
+          <li>Fixed number entry in PRGM mode when BINM/OCTM/HEXM active.</li>
+          <li>No longer setting flag 22 if number entry ends with DROP in NSTK mode.</li>
+          <li>Added LINE PLOT.M SPFV SPPV TVM USFV USPV to CATALOG-&gt;MISC.</li>
+          <li>→PAR now produces more helpful output in TRACE mode.</li>
+          <li>Windows, Mac, and Linux versions: added Alt-1 through Alt-6 as mappings for the second row of the keyboard.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.11" date="2022-10-01">
+      <description>
+        <ul>
+          <li>Fixed crash in SHOW for certain complex numbers.</li>
+          <li>Added A...F function. This allows programs to turn on HEXM mode with the A...F menu activated.</li>
+          <li>Added UBASE and UVAL to the equation parser.</li>
+          <li>PLOT: Fixed coordinate rounding at the top of the display.</li>
+          <li>Raised precedence of _ operator, so expressions like 40000_"km"/1_"d" can now be written without parentheses.</li>
+          <li>The direct solver now converts the solution to match the units of the previous value of the variable being solved for, if it existed already and had compatible units. In all other cases, the variable is overwritten, as before.</li>
+          <li>iOS version: Added Calculator / Print-Out swipe direction configuration option to Preferences.</li>
+          <li>Android, iOS, and MacOS ARM versions: Fixed incorrect Out of Range error returned by BASE functions in certain cases, e.g. BRESET 64 WSIZE 1 ENTER BASE÷.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.10" date="2022-08-13">
+      <description>
+        <ul>
+          <li>Fixed crash in PARSE when parsing ITEM().</li>
+          <li>Fixed (re,im) complex pasting. This was broken by localized copy &amp; paste.</li>
+          <li>Special cases for pure real and pure imaginary in SQRT.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.9" date="2022-06-19">
+      <description>
+        <ul>
+          <li>SGN() didn't evaluate its parameter, and instead consumed the value from level 1. Fixed. Note that this was a code generator bug; any expressions containing SGN() will have to be re-parsed in order to eliminate the effects of this bug.</li>
+          <li>SOLVE in PLOT, when used with a function with X:&lt;STK&gt;, would create an extraneous variable named "". Fixed.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.8" date="2022-06-18">
+      <description>
+        <ul>
+          <li>I%YR iteration robustness improvements.</li>
+          <li>Localized Copy &amp; Paste.</li>
+          <li>Fixed handling of invalid number keys in BASE.</li>
+          <li>Setting AMORT-&gt;TABLE parameters to 1 initially.</li>
+          <li>Fixed #P parameter check so it doesn't allow 0.</li>
+          <li>iOS and MacOS versions: Fixed skin rendering for iOS 16 and MacOS 13.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.7" date="2022-06-11">
+      <description>
+        <ul>
+          <li>Fixed crash in variable catalog.</li>
+          <li>I%YR robustness improvements.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.6" date="2022-06-08">
+      <description>
+        <ul>
+          <li>Fixed I%YR when PMT=0 (broken in 1.0.5)</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.5" date="2022-06-08">
+      <description>
+        <ul>
+          <li>TVM: PMT returned incorrect results in BEGIN mode. Fixed.</li>
+          <li>TVM: In some cases, I%YR could return inaccurate results because of poor starting guesses for the iteration. Fixed.</li>
+          <li>More accurate complex ACOS and ACOSH.</li>
+          <li>Android version: Now removes itself from the task list if exited using OFF.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.4" date="2022-05-17">
+      <description>
+        <ul>
+          <li>TVM: Fixed error checks in N.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.3" date="2022-05-13">
+      <description>
+        <ul>
+          <li>SOLVE now handles functions that are always positive or always negative a bit better, reporting Extremum when the iteration appears to be bouncing around without improving, instead of continuing indefinitely.</li>
+          <li>PLOT now detects &lt;Not a Number&gt; in XMIN/XMAX/YMIN/YMAX and reports Invalid Data, instead of freezing.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.2" date="2022-05-09">
+      <description>
+        <ul>
+          <li>Added code to prevent freeze in PLOT under certain circumstances.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.1a" date="2022-05-09">
+      <description>
+        <ul>
+          <li>Fix for crash on startup with Android versions before 4.3.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0.1" date="2022-05-05">
+      <description>
+        <ul>
+          <li>DIM "X", when X existed but was not a matrix, would cause a crash. Fixed.</li>
+          <li>Equations: NOT was broken, not recognized as Boolean operator. Fixed.</li>
+          <li>Equations: Added TYPE? and UNIT? functions.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0a" date="2022-05-05">
+      <description>
+        <ul>
+          <li>More efficient display updating, so long-running programs that update the display a lot don't waste a lot of CPU time repainting the display faster than the human eye can see, and spend more time actually running the program instead. Note that this update is for Windows and Linux only, because the Android, iOS, and MacOS versions already worked this way.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.0" date="2022-04-27">
+      <description>
+        <ul>
+          <li>Based on Free42 3.0.11, with the addition of: a larger and resizable display, algebraic equations, attached units, directories, time value of money and amortization schedules, and function plotting.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+  </releases>
+</component>
