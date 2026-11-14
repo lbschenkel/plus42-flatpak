@@ -3,7 +3,7 @@ command: plus42dec
 default-branch: stable
 
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 
 finish-args:
@@ -20,8 +20,8 @@ modules:
   - aarch64
   sources:
   - type: archive
-    url: https://thomasokken.com/plus42/upstream/plus42-upstream-1.3.15.tgz
-    sha256: 158d6e0a666a47feeeb2d96f55416ab7570c1b2767a70e01554d22bb6e880adc
+    url: https://thomasokken.com/plus42/upstream/plus42-upstream-1.5.3.tgz
+    sha256: 6715e694fa56c2d8d0c70ea713840fe7812476e424a82b89afda55042055d7f2
   # Fix Intel library build on aarch64:
   - type: file
     path: patch-aarch64-include-fenv.patch

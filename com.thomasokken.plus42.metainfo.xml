@@ -43,6 +43,89 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.5.3" date="2026-11-10">
+      <description>
+        <ul>
+          <li>The unit resolution logic would look for user-defined units before looking for prefixed built-in units, so a user-defined mV would override the built-in V with prefix m. Fixed.</li>
+          <li>In the programmable menu, pressing ▲ or ▼ if they hadn't been assigned would cause an Internal Error. This bug was introduced with the support for shifted assignments in 1.5. It was harmless but annoying. Now fixed.</li>
+          <li>Copying and Pasting text now deals with linefeeds more consistently, and doesn't lose information when copying and pasting matrices and lists with embedded text.</li>
+          <li>Functions invoked using direct XEQ mapping in skins now have fewer side effects. They leave the program counter at the same place where they started, even when the function ends with RTNERR, and they no longer cancel the programmable menu.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.5.2" date="2026-11-04">
+      <description>
+        <ul>
+          <li>Implemented ARG.</li>
+          <li>When using LTOP and ATOP options together, to show both the LASTX and ALPHA registers at the top of the stack area, the user can now control the order in which they appear: whichever one was enabled most recently will be above the other.</li>
+          <li>Implemented conversions to and from DPD-encoded decimal floating point: N→PS/PD/PQ, PS/PD/PQ-&gt;N. Compare these to the existing N→DS/DD/DQ and DS/DD/DQ→N functions, which convert to and from BID-encoded decimal floating point.</li>
+          <li>Fixed two-argument STOFLAG. It got broken in 1.5.</li>
+          <li>Fixed pasting of HP-41 style GTO/XEQ IND X/Y/Z/T/L.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.5.1" date="2026-10-31">
+      <description>
+        <ul>
+          <li>Fixed a crash while handling nested lists.</li>
+          <li>Implemented RE, IM, and CONJ.</li>
+          <li>0=? and 0≠? now accept complex numbers, real and complex matrices, and lists. Lists are checked recursively; empty lists are considered to be zero.</li>
+          <li>X=? and X≠? now consider a and a+0i to be equal. Which, let's be real here, they are.</li>
+          <li>Note that these changes do not apply to X=0?, X≠0?, X=Y?, and X≠Y? They remain complex-unfriendly, for the sake of HP-42S compatibility.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.5" date="2026-10-30">
+      <description>
+        <ul>
+          <li>It is now possible to make shifted assignments in the programmable menu and in CUSTOM.</li>
+          <li>It is now possible to use a list for REGS, instead of a matrix. With a list in REGS, the numbered registers can hold all types of data.</li>
+          <li>Many built-in functions can now be applied to lists, causing them to operate on the elements of the list one by one. See the Free42 web site for details.</li>
+          <li>Implemented SORT function. It sorts lists. See the Free42 web site for details.</li>
+          <li>PRV and PRX now handle nested lists, and matrices inside lists.</li>
+          <li>Better list display in the upper stack levels and in SHOW.</li>
+          <li>Implemented PARAMS function. Given a global LBL name, or an equation object, it returns a list containing all the associated parameters.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.4.1" date="2026-10-22">
+      <description>
+        <ul>
+          <li>PRTRACE bug fix: it could corrupt the global LBL table.</li>
+          <li>PRTRACE improvements: 1. When there is a RTN that was caused by a KEYX, now shows the details of the menu keystroke, after the line that had caused program execution to halt. 2. When invoked from a program without an error having been caught, the first line in the stack trace now shows the PRTRACE line, rather than the line after the PRTRACE.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.4a" date="2026-10-17">
+      <description>
+        <ul>
+          <li>Fixed a potential slight mis-alignment in the display bitmap area.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
+    <release version="1.4" date="2026-10-16">
+      <description>
+        <ul>
+          <li>Implemented try/catch style error handling: TRY, TRYX, CATCH?, PRTRACE. See the Free42 web site for details.</li>
+          <li>RTNERR and RAISE support five additional error numbers; see the Free42 web site for details.</li>
+          <li>Keyboard mapping now uses a platform-independent syntax. The existing keymap.txt is renamed to keymap.old, and a new keymap.txt is created, using the new syntax. All the skins in the Plus42 skins collection that contain keyboard mappings have been updated to take advantage of the new syntax, but the old syntax is also still supported, but only in skins, not in keymap.txt.</li>
+          <li>Direct XEQ mapping: Skins can now define macros that perform an XEQ that works regardless of which menu is active, using the syntax `FOO` to perform XEQ "FOO".</li>
+          <li>Implemented MENU1: This works just like MENU, i.e. it opens the Programmable Menu, except MENU1 opens the menu as an application menu, rather than as a regular menu. This means that MENU1 allows users to interact with command menus without losing their place in the programmable menu.</li>
+          <li>Flag 33 is now automatically cleared whenever a non-programmable-menu key is pressed. This can be used to implement VARMENU-like behavior using the programmable menu.</li>
+          <li>Implemented IP→S, a function that converts the integer part of a number to a string, like AIP, except the string is placed in the X register, not ALPHA.</li>
+          <li>Fixed NORM/TRACE output for programmable menu.</li>
+          <li>Added keyboard shortcut for Show Print-Out.</li>
+          <li>Windows and MacOS versions: When a skin is selected that is too large to fit on the screen, it is now automatically scaled down to fit, while preserving its aspect ratio.</li>
+        </ul>
+      </description>
+      <url>https://thomasokken.com/plus42/history.html</url>
+    </release>
     <release version="1.3.15" date="2026-05-04">
       <description>
         <ul>
